@@ -26,7 +26,7 @@ SECRET_KEY = 'k6c3y8401*ddn=85rn+o!kwbv864(@v5hmhg5o^ffy329=4q=o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'edumates.herokuapp.com/']
+ALLOWED_HOSTS = ['localhost', '.herokuapp.com']
 # https://git.heroku.com/edumates.git
 
 
