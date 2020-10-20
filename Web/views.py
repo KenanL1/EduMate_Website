@@ -75,3 +75,12 @@ def forum(request):
 @login_required
 def quiz(request):
     return render(request, "Web/quiz.html")
+
+def solution(request):
+    return render(request, "Web/solution.html")
+
+def about(request):
+    return render(request, "Web/about.html")
+
+def contact(request):
+    return render(request, "Web/contact.html")
