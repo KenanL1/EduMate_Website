@@ -17,7 +17,7 @@ def index(request):
 
     # Everyone else is prompted to sign in
     else:
-        return HttpResponseRedirect(reverse("login"))
+        return render(request, "Web/index.html")
 
 def login_view(request):
     if request.method == "POST":
