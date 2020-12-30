@@ -1,7 +1,21 @@
 {% extends "Web/layout.html" %}
+{% load static %}
 
 {% block body %}
+    <h2 class="display-1 text-center">Quiz</h2>
 
-    <h2>Quiz</h2>
+    <div class="quiz-container text-center">
+        <div id="quiz"></div>
+    </div>
+    <div class="text-center">
 
+    <button class="page-link" id="previous">Previous Question</button>
+    <button class="page-link" id="next">Next Question</button>
+    <button class="btn btn-primary" id="submit">Check</button>
+    <div id="results"></div>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script  type="text/javascript" src="{% static 'Web/quiz.js' %}"></script>
 {% endblock %}

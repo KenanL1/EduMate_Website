@@ -4,8 +4,6 @@
 <html lang="en">
 
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-46066248-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -72,7 +70,7 @@
         </ul>
       </div>
     </div>
-    <div>
+    <div class="text-primary">
         {% if user.is_authenticated %}
         Signed in as <strong>{{ user.username }}</strong>.
         {% else %}
@@ -120,6 +118,10 @@
     </div>
     <!-- /.container -->
   </footer>
+  {% block script %}
+
+  {% endblock %}
+  <script> var current_user = "{{ user.username }}"</script>
 
   <!-- Bootstrap core JavaScript -->
   <script src="{% static 'Web/jquery.min.js' %}"></script>

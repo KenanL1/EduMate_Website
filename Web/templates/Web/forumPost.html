@@ -1,0 +1,35 @@
+{% extends "Web/layout.html" %}
+{% load static %}
+
+
+{% block body %}
+<div class="card box container">
+    <br>
+    <h5 class="card-title">
+        <h3>{{forum.topic}}</h3>
+        <div class="card-body container">
+            <p>{{forum.description}}</p>
+        </div>
+    </h5>
+    <hr>
+    <p> By: {{forum.user.username}}</p>
+    <hr>
+    
+    <div id="posts"></div>
+
+    <div id="new_post" class="border">
+        <h3>New Post</h3>
+        <form>
+            <textarea class="form-control" id="post-body"></textarea>
+            <input type="submit" id="add" value="Post" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+
+
+<script>
+    var f = "{{forum.topic}}"
+</script>
+<script src="{% static 'Web/forum.js' %}"></script>
+
+{% endblock %}
